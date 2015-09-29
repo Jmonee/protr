@@ -54,7 +54,7 @@
 extractPSSMFeature = function(pssmmat) {
 
     # Normalize PSSM scores to (0, 1)
-    result = as.vector(1/(1 + exp(pssmmat)))
+    result = as.vector(1/(1 + exp(-pssmmat)))
 
     AADict = c('A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 
                'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
